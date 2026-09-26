@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy MOTMOT Cailey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            line-height: 1.8;
+            color: #5a2e42;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* BLURRED POLAR BACKGROUND — LESS BLURRY */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('POLAR.png') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            z-index: -2;
+            transform: scale(1.05);
+        }
+
+        /* Soft pink-yellow tint */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 249, 204, 0.55) 0%, rgba(255, 230, 242, 0.55) 50%, rgba(255, 217, 232, 0.55) 100%);
+            z-index: -1;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(255, 214, 232, 0.75);
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #b34d79;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            color: #803b60;
+        }
+
+        /* Photo + Paragraph Block — PINK THEME */
+        .photo-block {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(255, 214, 232, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 18px rgba(255, 153, 204, 0.25);
+            position: relative;
+            z-index: 1;
+        }
+
+        .photo-block img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.25);
+            margin-bottom: 1.5rem;
+        }
+
+        .photo-block p {
+            font-size: 1.1rem;
+            color: #6b3450;
+            line-height: 2;
+        }
+
+        /* PARALLAX — POLAR BACKGROUND + PINK TINT + GENTLE BLUR */
+        .parallax {
+            min-height: 80vh;
+            background: url('POLAR.png') no-repeat center center;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .parallax::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 183, 204, 0.6);
+            backdrop-filter: blur(5px);
+            z-index: 0;
+        }
+
+        .parallax-overlay {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 3rem;
+            max-width: 800px;
+            border-radius: 20px;
+            text-align: center;
+            color: #4a2035;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+        }
+
+        .parallax-overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #b34d79;
+        }
+
+        .parallax-overlay p {
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 214, 232, 0.75);
+            backdrop-filter: blur(5px);
+            text-align: center;
+            padding: 2rem;
+            color: #803b60;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .parallax-overlay {
+                padding: 2rem 1.5rem;
+            }
+            .parallax-overlay h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1> HAPPY MONTHSARY, MY GORGEOUS CAILEY</h1>
+        <p>Every moment with you is my favorite memory. Thank you for being my happiness, my safe place, and my greatest blessing.</p>
+    </section>
+
+    <!-- Photo 1 + Paragraph -->
+    <section class="photo-block">
+        <img src="c1.jpg" alt="Our first memory">
+        <p>Our first date will always be my favorite time ever, I love how I enjoyed that day and be with you :3</p>
+    </section>
+
+    <!-- Photo 2 + Paragraph -->
+    <section class="photo-block">
+        <img src="c2.jpg" alt="Us together">
+        <p>Being with you feels like coming home. Through every laugh and every quiet moment, you make life warmer, brighter, and so much more meaningful. I love the way we fit together, how we can be ourselves, and how even the simplest moments feel special just because we're sharing them.</p>
+    </section>
+
+    <!-- Photo 3 + Paragraph -->
+    <section class="photo-block">
+        <img src="c3.jpg" alt="My favorite person">
+        <p>Lastly, having you in my birthday is the most happiest gift I ever received, and i cant thank you enough for being the most amzing person in my life baby.</p>
+    </section>
+
+    <!-- Parallax Section — POLAR + PINK BLUR -->
+    <section class="parallax">
+        <div class="parallax-overlay">
+            <h2>For You, My Wifey:3</h2>
+            <p>Happy 1st monthsary baby. I made this coding just for you baby>< Its crazy how 1 month goes by feels so fast with you. Ang laki lagi ng psasalamat ko araw araw dahil meron akong ikaw. Sa tingin ko, hinde. PARA sakin hinding hindi ako magsasawa sayo. Sa totoosin mahal na mahal kita bawat araw nang nkakalipas. Lagi kong ipapabatid na mahal na mahal kita sobra Cailey. Sana kahit hindi mo nasasabi ang mga msasakit na alaala, sana you feel my hugs and prescence kahit ala ako sa tabi mo, to remind you na everythings gonna be alright^^. Kung alam mo lang kung gaano ako kasaya tuwing naalala ko kung pano mo ako sinagot. ANG SAYA SAYA KO, kung hindi ako nag confess siguro hangang ngayon nakatunganga lang ako sayo LMAO. Jokes aside, Mahal na mahal kita Cailey, at totoo yun. Bawat segundo, bawat minuto, bawat araw, bawat buwan, bawat taong makakalipas, mahal kita. Tangap ko kung sino ikaw. Sa simula palang, alam kong ikaw na mamahalin ko, papaksalan, at papanindigan. Hindi ako mapapagod sating dalawa kasi IKAW ANG PAHINGA KO sa mga pagod kong araw<3 </p>
+        </div>
+    </section>
+
+    <!-- Closing Message -->
+    <section class="photo-block">
+        <h2 style="color:#b34d79; margin-bottom:1rem;">Cailey+Gabby= I love you for Eternity </h2>
+        <p>Lastly, I want you to know I will never ever leave you. No matter how hard the challenges were going to face through, I will stay kasi MAHAL KITA. Mahal kita at hindi ko kayang hindi ka mahalin Cailey. Mashado kitang mahal para gawin ko yung karumaldumal na yon. You helped me learned all about you and will never stop na matutunan kita. Mahal kita kahit sa malungkot, masaya, o kahit pagod na araw, mahal kita Cailey. Bakit nga ba kita mahal? Kasi nakita ko kung ano hindi nakikita ng ibang tao kung sino ka. ikaw ang the best Person I will ever have for eternity. Tatangapin kita kung sino ka, kahit hindi ka magpaganda kasi sa paningin ko, NAPAKA GANDA MO PANGAKO. Hindi lang sa mukha pati rin saloobin mo. Hindi ko makakalimutan yung mga araw nag uusap pa tayo ng wala pa tayo, nagpapakipot sayo at simpleng one point Goodnight sayo sa call dati hehe. Pero kahit ganon lang ako dati. Alam kong mamahalin kita ng sobra, isang kalapastangan na hindi ka mahalin. Kasi ikaw Cailey? Sapat ka na at ikaw lang iibigin ng puso kong malambot, ikaw ang pahinga at tahanan ko. Halika dito ka sakin at mamahalin kita ng SOBRANG SOBRA hindi ako magkukulang saating dalawa. Kung meron pang word nag beyond sa I love you siguro para sakin Iniirog kita sa mahabang panohon, kahit sa pagtanda, at sa kamatayan nating dalawa. Lastly, I am so grateful for having you in my life baby. Sobra ang pasasalamat ko kay Lord kasi binigay niya ako ng ikaw. At PARA sakin hindi kita bibiguin at mamahalin kita habang buhay, Cailey<3 </p>
+        <p style="font-size: 1.5rem; margin-top: 2rem; font-weight: bold; color:#b34d79;">I love you endlessly BOSSING</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Sana magustuhan mong ginawa kong bulaklak para sayo Baby :3 I made this coding habang kausap kita and yung flower <3 I made it with all of my hearth Baby !!! HAPPY MOTMOT MY GORGEOUS WIFE</p>
+    </footer>
+</body>
+</html>
